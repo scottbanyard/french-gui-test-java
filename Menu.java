@@ -1,3 +1,6 @@
+// scott banyard 2015
+// french test - menu
+
 import javax.swing.*;
 
 import java.awt.*;
@@ -34,6 +37,7 @@ public class Menu extends JFrame {
     	b1.addActionListener(new ActionListener() {
      		public void actionPerformed(ActionEvent e) {
      				MonthsTest monthtest = new MonthsTest();
+
      				try {
 						MonthsTest.main(frame);
 					} catch (IOException e1) {
@@ -48,7 +52,7 @@ public class Menu extends JFrame {
      		public void actionPerformed(ActionEvent e) {
      				NumbersTest numbtest = new NumbersTest();
      				try {
-						NumbersTest.main(null);
+						NumbersTest.main(frame);
 					} catch (IOException e1) {
 						e1.printStackTrace();
 					}
@@ -61,7 +65,7 @@ public class Menu extends JFrame {
      		public void actionPerformed(ActionEvent e) {
      				ColoursTest coltest = new ColoursTest();
      				try {
-						ColoursTest.main(null);
+						ColoursTest.main(frame);
 					} catch (IOException e1) {
 						e1.printStackTrace();
 					}

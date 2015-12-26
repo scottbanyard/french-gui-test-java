@@ -1,3 +1,6 @@
+// scott banyard 2015
+// french test - months test
+
 import javax.swing.*;
 
 import java.awt.*;
@@ -16,7 +19,6 @@ public class MonthsTest extends JFrame {
 	public static ArrayList<String> usedQuestions = new ArrayList<String>();
 	
 	public static void main(JFrame frame) throws IOException {
-		
 		test(frame);
 	}
 	
@@ -41,8 +43,8 @@ public class MonthsTest extends JFrame {
 		questions.put("What is 'November'?", "novembre");
 		questions.put("What is 'December'?", "decembre");
 		
+		// ends test after 5 questions
 		if (questionCount != 5) {
-			//JLabel feedback = new JLabel("");
 			
 			Random randomizer = new Random();
 			
@@ -77,19 +79,18 @@ public class MonthsTest extends JFrame {
 	    			String textfieldAnswer = textfield.getText();
 	    			// any case will be accepted
 	    			textfieldAnswer = textfieldAnswer.toLowerCase();
+	    			// if same as value in map, then increase score
 	    			if (textfieldAnswer.equals(questions.get(randomQuestion))) {
-	    				//feedback.setText("Correct!");
 	    				score++;
-	    			//} else {
-	    				//feedback.setText("Wrong! The answer was '" + questions.get(randomQuestion) + "'");
 	    			}
+	    			// increase question count and re-call function to ask new question
 	     			questionCount++;
 	     			test(frame);
 	     		}
 	     	});
 			
 			
-	    	// creates a grid
+	    	// creates a grid layout
 	    	GridBagConstraints c = new GridBagConstraints();
 	    	
 	    	// insets cause space of 10 pixels between buttons
@@ -105,32 +106,49 @@ public class MonthsTest extends JFrame {
 	    	c.gridx = 0;
 	    	c.gridy = 3;
 	    	panel.add(submitButton, c);
-	    	
-	    	//c.gridx = 0;
-	    	//c.gridy = 4;
-	    	//panel.add(feedback, c);
-	    	
+    	
 	    	frame.add(panel, BorderLayout.CENTER);
 	    	
-			// sets frame centrally in screen
-			//Dimension dim = Toolkit.getDefaultToolkit().getScreenSize();
-			//frame.setLocation(dim.width/2-frame.getSize().width/2, dim.height/2-frame.getSize().height/2);
 			frame.setVisible(true);
 			
 		} else {
+			// END OF TEST - RETURNS SCORE
+			
+			// clears window
 			frame.getContentPane().removeAll();
 			frame.getContentPane().repaint();
 			
+			// sets up button to take you back to the main menu
+			JButton menuButton = new JButton("Back to Menu");
+			menuButton.setFont(new Font("Courier New", Font.ITALIC, 20));
+	    	menuButton.addActionListener(new ActionListener() {
+	    		public void actionPerformed(ActionEvent e) 
+	     		{
+     				try {
+     					// closes current window and opens main menu
+     					frame.dispose();
+						Menu.main(null);
+					} catch (IOException e1) {
+						e1.printStackTrace();
+					}
+	     		}
+	     	});
+			
+			// sets up label showing result of test
 			JLabel result = new JLabel("That's the end of the test. You managed to score " + score + " out of 5.");
 			result.setFont(new Font("Courier New", Font.BOLD, 20));
 			
-	    	// creates a grid
+	    	// creates a grid layout
 	    	GridBagConstraints c = new GridBagConstraints();
 	    	
 	    	c.insets = new Insets(10, 10, 10, 10);
 	    	c.gridx = 0;
 	    	c.gridy = 1;
 	    	panel.add(result, c);
+	    	
+	    	c.gridx = 0;
+	    	c.gridy = 2;
+	    	panel.add(menuButton, c);
 	    	
 	    	frame.add(panel, BorderLayout.CENTER);
 	    	frame.setVisible(true);
