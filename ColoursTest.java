@@ -1,7 +1,6 @@
 // scott banyard 2015
 // french test - colours test
 
-
 import javax.swing.*;
 
 import java.awt.*;
@@ -67,6 +66,7 @@ public class ColoursTest extends JFrame {
 			
 			// sets up textfield
 			JTextField textfield = new JTextField(15);
+			textfield.setFont(new Font("Courier New", Font.LAYOUT_LEFT_TO_RIGHT, 30));
 			
 			// sets up submit button
 			JButton submitButton = new JButton("Submit");
@@ -126,6 +126,8 @@ public class ColoursTest extends JFrame {
      				try {
      					// closes current window and opens main menu
      					frame.dispose();
+     					// resets question count
+     					questionCount = 0;
 						Menu.main(null);
 					} catch (IOException e1) {
 						e1.printStackTrace();

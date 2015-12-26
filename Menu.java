@@ -13,7 +13,6 @@ public class Menu extends JFrame {
 
 	public Menu() throws IOException {
 		
-		
 		JFrame frame = new JFrame("French Test");
 		
 		frame.setSize(800, 500);
@@ -37,7 +36,6 @@ public class Menu extends JFrame {
     	b1.addActionListener(new ActionListener() {
      		public void actionPerformed(ActionEvent e) {
      				MonthsTest monthtest = new MonthsTest();
-
      				try {
 						MonthsTest.main(frame);
 					} catch (IOException e1) {
