@@ -1,6 +1,6 @@
 # French Test using a GUI in Java (swing)
 
-I began this GUI by following on from my frenchTranslations.c program (found in https://github.com/scottbanyard/french-translations-C).
+I began this GUI by following on from my frenchTranslations.c program (found in https://github.com/scottbanyard/french-programs-C).
 I wanted to be able to represent a test system with a GUI, so I decided to recap swing in Java.
 
 Simple UI shown below :
