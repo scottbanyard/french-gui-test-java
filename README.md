@@ -3,6 +3,10 @@
 I began this GUI by following on from my frenchTranslations.c program (found in https://github.com/scottbanyard/french-translations-C).
 I wanted to be able to represent a test system with a GUI, so I decided to recap swing in Java.
 
+Simple UI shown below :
+
+![alt text](https://github.com/scottbanyard/french-gui-test-java/blob/master/images/simpleUI.png "a test of month knowledge")
+
 ### Current Progress:
 
 `- full test questions in place for months and colours`
