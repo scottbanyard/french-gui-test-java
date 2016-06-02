@@ -23,8 +23,8 @@ Simple UI shown below :
 
 `- improve design - make it look more colourful`
 
-`- work out a system to ask questions on all numbers (index possibly)`
+`- work out a system to ask questions on all numbers (index possibly - done in C program)`
 
-`- choose how many questions you want`
+`- choose how many questions you want (done in C program)`
 
-`- feedback on questions you got wrong (show right answer)`
+`- feedback on questions you got wrong (show right answer - done in C program)`
